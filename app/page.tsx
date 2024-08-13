@@ -26,10 +26,10 @@ const posts = [
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-4 hero-content">
         <h1>CG STEWART image or whatever</h1>
       </div>
-      <section id="about" className="flex flex-col">
+      <section id="about" className="flex flex-col m-2">
         <h2>About me</h2>
         <p className="gap-2 space-y-2 p-1">
           I am a software engineer and a writer. I love to build things and
@@ -41,9 +41,10 @@ export default function Home() {
             Here's some stuff i've built to monetize my skills
           </p>
         </div>
-        <div>
-          <WorkTimeline />
-        </div>
+      </section>
+      <section id="work-experience">
+        <div className="divider divider-primary"></div>
+        <WorkTimeline />
       </section>
       <div className="divider divider-primary"></div>
       <section id="blog-posts" className="flex-col p-1">
