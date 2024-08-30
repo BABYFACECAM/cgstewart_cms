@@ -1,6 +1,4 @@
-import Navbar from "@/components/navigation/hero-nav";
 import WorkTimeline from "@/components/timeline/work-timeline";
-import Link from "next/link";
 
 const posts = [
   {
@@ -33,12 +31,13 @@ export default function Home() {
         <h2>About me</h2>
         <p className="gap-2 space-y-2 p-1">
           I am a software engineer and a writer. I love to build things and
-          write about them. My current working tech stack is "tech stack icons"
+          write about them. My current working tech stack is &quot;tech stack
+          icons&quot;
         </p>
         <div>
           <h2>My Startups</h2>
           <p className="gap-2 space-y-2 p-1">
-            Here's some stuff i've built to monetize my skills
+            Here&apos;s some stuff I&apos;ve built to monetize my skills
           </p>
         </div>
       </section>
