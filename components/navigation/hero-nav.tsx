@@ -12,8 +12,8 @@ interface NavItem {
 const navItems: NavItem[] = [
   { href: "/", label: "Home" },
   { href: "/blog-posts", label: "Blog" },
-  { href: "/book-reviews", label: "Book Reviews" },
   { href: "/my-projects", label: "My Projects" },
+  { href: "/book-reviews", label: "Book Reviews" },
   { href: "/video-content", label: "Video Content" },
   { href: "/contact-me", label: "Contact Me" },
 ];
@@ -29,7 +29,7 @@ function NavItem({ href, label }: NavItem) {
           "relative block px-3 py-2 transition",
           isActive
             ? "text-teal-500 dark:text-teal-400"
-            : "hover:text-teal-500 dark:hover:text-teal-400",
+            : "hover:text-teal-500 dark:hover:text-teal-400"
         )}
       >
         {label}
