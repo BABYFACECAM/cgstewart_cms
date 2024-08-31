@@ -46,14 +46,11 @@ export default function Home() {
         <WorkTimeline />
       </section>
       <div className="divider divider-primary"></div>
-      <section id="blog-posts" className="flex-col p-1">
-        <div className="flexjustify-between gap-2">
-          <h2 className="flex gap-2 items-center space-x-2 space-y-2 p-2">
+      <section id="blog-posts" className="flex flex-col  justify-center p-1">
+        <div className="flex items-center justify-center gap-2 mb-2">
+          <h2 className="flex flex-col gap-2 items-center space-x-2 space-y-2 p-2 text-3xl font-bold">
             Blog posts
           </h2>
-          <button className="btn btn-outline hover:btn-success">
-            View All
-          </button>
         </div>
         <div className="flex flex-col gap-4 p-4">
           {posts.map((post) => (
@@ -65,7 +62,7 @@ export default function Home() {
                 <h2 className="card-title">{post.title}</h2>
                 <p>{post.description}</p>
                 <div className="card-actions justify-end">
-                  <button className="btn btn-outline  hover:btn-success">
+                  <button className="btn bg-primary text-black  hover:btn-success">
                     {post.button}
                   </button>
                 </div>
@@ -73,6 +70,8 @@ export default function Home() {
             </div>
           ))}
         </div>
+
+        <button className="btn btn-primary hover:btn-success">View All</button>
       </section>
       <div className="divider divider-primary"></div>
     </main>

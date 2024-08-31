@@ -99,11 +99,11 @@ const TechnologyList: React.FC<{ technologies: TechnologySet }> = ({
         items.map((item: string) => (
           <span
             key={`${category}-${item}`}
-            className="px-2 py-1 bg-gray-200 text-gray-800 text-xs font-medium rounded-full"
+            className="px-2 py-1 bg-primary text-gray-800 text-xs font-medium rounded-full"
           >
             {item}
           </span>
-        )),
+        ))
     )}
   </div>
 );
@@ -134,7 +134,11 @@ const TimelineItem: React.FC<WorkExperience & { index: number }> = ({
       </svg>
     </div>
     <div
-      className={`mb-10 ${index % 2 === 0 ? "timeline-start md:text-end" : "timeline-end md:text-start"}`}
+      className={`mb-10 ${
+        index % 2 === 0
+          ? "timeline-start md:text-end"
+          : "timeline-end md:text-start"
+      }`}
     >
       <time className="font-mono italic">{dateRange}</time>
       <div className="text-lg font-black">{jobTitle}</div>
@@ -142,7 +146,9 @@ const TimelineItem: React.FC<WorkExperience & { index: number }> = ({
       <div className="text-sm text-gray-600 dark:text-gray-400">{location}</div>
       <TechnologyList technologies={technologies} />
       <ul
-        className={`list-disc ${index % 2 === 0 ? "md:list-inside" : "md:list-outside"} mt-4 text-sm list-none`}
+        className={`list-disc ${
+          index % 2 === 0 ? "md:list-inside" : "md:list-outside"
+        } mt-4 text-sm list-none`}
       >
         {responsibilities.map((resp, idx) => (
           <li key={idx} className="mb-2">
